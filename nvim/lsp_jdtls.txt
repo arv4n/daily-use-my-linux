@@ -1,0 +1,336 @@
+lspconfig.jdtls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  on_init = on_init,
+  settings = {
+    java = {
+      configuration = {
+        updateBuildConfiguration = "interactive",
+        updateBuildConfiguration_java = "interactive",
+        runtimes = {
+          { name = "JavaSE-21", path = "/usr/lib/jvm/java-21-openjdk" },
+      },
+      signatureHelp = {
+        enabled = true,
+        showSignatures = true,  -- Tampilkan tanda tangan
+        showSignatures_ruby = true,  -- Tampilkan tanda tangan
+        showSignatures_python = true,  -- Tampilkan tanda tangan
+        showSignatures_java = true,  -- Tampilkan tanda tangan
+        showSignatures_typescript = true,  -- Tampilkan tanda tangan
+        showSignatures_html = true,  -- Tampilkan tanda tangan
+        showSignatures_css = true,  -- Tampilkan tanda tangan
+        showSignatures_javascript = true,  -- Tampilkan tanda tangan
+        showSignatures_javascriptreact = true,  -- Tampilkan tanda tangan
+        showSignatures_typescriptreact = true,  -- Tampilkan tanda tangan
+        showSignatures_vue = true,  -- Tampilkan tanda tangan
+      },
+      format = {
+        settings = {
+          profile = "Sun",  -- Atau "Eclipse" atau "Sun"
+          additionalProfiles = {"Eclipse", "Sun"},
+          additionalProfiles_ruby = {"Eclipse", "Sun"},  -- Tambahkan profil tambahan untuk format
+          additionalProfiles_python = {"Eclipse", "Sun"},  -- Tambahkan profil tambahan untuk format
+          additionalProfiles_java = {"Eclipse", "Sun"},  -- Tambahkan profil tambahan untuk format
+          additionalProfiles_typescript = {"Eclipse", "Sun"},  -- Tambahkan profil tambahan untuk format
+          additionalProfiles_html = {"Eclipse", "Sun"},  -- Tambahkan profil tambahan untuk format
+          additionalProfiles_css = {"Eclipse", "Sun"},  -- Tambahkan profil tambahan untuk format
+          additionalProfiles_javascript = {"Eclipse", "Sun"},  -- Tambahkan profil tambahan untuk format
+          options = {
+            tabSize = 2,
+            insertSpaces = true,
+            endOfLine = "lf",
+            insertFinalNewline = true,
+            trimTrailingWhitespace = true,
+            trimFinalNewlines = true,
+            },
+        },
+      },
+      maven = {
+        downloadSources = true,
+        downloadJavadoc = true,
+        downloadSourcesAndJavadoc = true,
+        offline = true,
+        offline_ruby = true,  -- Mengunduh file sumber dan dokumentasi secara offline
+        offline_python = true,  -- Mengunduh file sumber dan dokumentasi secara offline
+        offline_java = true,  -- Mengunduh file sumber dan dokumentasi secara offline
+        offline_typescript = true,  -- Mengunduh file sumber dan dokumentasi secara offline
+        offline_html = true,  -- Mengunduh file sumber dan dokumentasi secara offline
+        offline_css = true,  -- Mengunduh file sumber dan dokumentasi secara offline
+        offline_javascript = true,  -- Mengunduh file sumber dan dokumentasi secara offline
+      },
+      build = {
+        autoBuild = true,
+        buildOnSave = true,
+      },
+      codeAction = {
+        organizeImports = true,
+        enable = true,
+        showImplicit = true,
+        showUnused = true,
+        showUnusedCode = true,
+
+      },
+      diagnostics = {
+        enable = true,
+        runOnSave = true,
+        showCodeActions = true,
+        showUnused = true,
+        showUnusedCode = true,
+        showUnusedCode_java = true,  -- Tampilkan kode yang tidak digunakan
+      },
+      jdk = {
+        home = "/usr/lib/jvm/java-24-openjdk/",
+              },
+      buildTools = {
+        gradle = {
+          autoSync = true,
+        },
+      },
+      debug = {
+        enable = true,
+        port = 1998,
+      },
+      -- aiDevelopment = {
+      --   enabled = true,
+      --   libraries = {
+      --     deeplearning4j = {
+      --       version = "1.0.0-M1.1",
+      --     },
+      --     stanfordnlp = {
+      --       version = "4.5.2",
+      --     },
+      --     tensorflow = {
+      --       version = "2.11.0",
+      --     },
+      --     opennlp = {
+      --       version = "1.9.4",  -- Apache OpenNLP untuk pemrosesan bahasa alami
+      --     },
+      --     h2oai = {
+      --       version = "3.38.0.1",  -- Library H2O.ai untuk pembelajaran mesin
+      --     },
+      --   },
+      -- },
+      completion = {
+        enabled = true,
+        suggestions = {
+          enabled = true,
+          showDetailed = true,
+          includeVariables = true,
+          includeMethods = true,
+        },
+      },
+      hover = {
+        enabled = true,
+      },
+      interactiveCodeAssist = {
+        enabled = true,
+        showInlineHints = true,
+      },
+      javaTest = {
+        enabled = true,
+      },
+      javaDebugAdapter = {
+        enabled = true,
+        port = 1998,
+      },
+      googleJavaFormat = {
+        enabled = true,
+      },
+      javaLanguageServer = {
+        enabled = true,
+        command = {"java-language-server"},
+        settings = {
+          java = {
+            home = "/usr/lib/jvm/java-24-openjdk/",
+            runtime = {
+              path = "/usr/lib/jvm/java-24-openjdk/",
+            },
+          },
+        },
+      },
+      webDevelopment = {
+        enabled = true,
+        frameworks = {
+          springBoot = true,
+          quarkus = true,
+        },
+        frontEnd = {
+          html = {
+            enabled = true,
+          },
+          css = {
+            enabled = true,
+            supportSCSS = true,
+          },
+          javascript = {
+            enabled = true,
+          },
+          typescript = {
+            enabled = true,
+          },
+        },
+      },
+      pythonIntegration = {
+        enabled = true,
+        tools = {
+          py4j = {
+            version = "0.10.9.5",
+          },
+          jython = {
+            version = "2.7.3",
+          },
+        },
+        features = {
+          bidirectionalCall = true,
+          dataExchange_ruby = true,  -- Menambahkan fitur data exchange
+          dataExchange_python = true,  -- Menambahkan fitur data exchange
+          dataExchange_java = true,  -- Menambahkan fitur data exchange
+          dataExchange_typescript = true,  -- Menambahkan fitur data exchange
+          dataExchange_html = true,  -- Menambahkan fitur data exchange
+          dataExchange_css = true,  -- Menambahkan fitur data exchange
+          dataExchange_javascript = true,  -- Menambahkan fitur data exchange
+
+          dataExchange = true,
+        },
+      },
+      pmd = {
+  enabled = true,
+  rulesets = {
+    "java-basic",
+    "java-braces",
+    "java-clone",
+    "java-codesize",
+    "java-comments",
+    "java-controversial",
+    "java-coupling",
+    "java-design",
+    "java-empty",
+    "java-finalizers",
+    "java-imports",
+    "java-j2ee",
+    "java-javabeans",
+    "java-junit",
+    "java-logging-jakarta-commons",
+    "java-logging-java",
+    "java-migrating",
+    "java-naming",
+    "java-optimizations",
+    "java-strictexception",
+    "java-strings",
+    "java-sunsecure",
+    "java-typeresolution",
+    "java-unnecessary",
+    "java-unusedcode",
+  },
+  options = {
+    -- Path ke custom ruleset
+    -- rulesetPath = "/home/emelynmorrgan/GITHUB/SOURCE/pmd/pmd-java/custom-ruleset.xml",
+    -- Path ke binary PMD (pastikan PMD CLI sudah diinstal)
+    pmdBinary = "/usr/bin/pmd",
+    -- Direktori analisis (opsional, jika Anda ingin menetapkan scope khusus)
+    analysisDir = "./src",
+    -- Format laporan hasil analisis
+    reportFormat = "text", -- Pilihan lain: "xml", "html"
+    failOnViolation = true, -- Hentikan build jika ada pelanggaran
+  },
+},
+
+neovimSupport = {
+  enabled = true,  -- Dukungan untuk Neovim
+  features = {
+    snippets = true,  -- Aktifkan dukungan snippet otomatis untuk mempercepat pengkodean
+    sorceryAI = true,  -- Integrasi AI seperti Sorcery atau GPT untuk kode otomatis
+            sorceryAI_ruby = true,  -- Integrasi AI seperti Sorcery atau GPT untuk kode otomatis
+            sorceryAI_python = true,  -- Integrasi AI seperti Sorcery atau GPT untuk kode otomatis
+            sorceryAI_java = true,  -- Integrasi AI seperti Sorcery atau GPT untuk kode otomatis
+    lspEnhancements = true,  -- Peningkatan pada LSP untuk Neovim
+    autoFormatting = true,  -- Format otomatis dengan Prettier, Black, atau alat lain
+    codeActions = true,  -- Mendukung tindakan kode langsung (e.g., refactor otomatis)
+    diagnosticsOnFly = true,  -- Diagnostik waktu nyata saat mengetik
+    autoCompletion = true,  -- Peningkatan autocomplete dengan luas
+    semanticTokens = true,  -- Dukungan token semantik untuk warna sintaksis yang lebih cerdas
+    debugging = true,  -- Tambahkan dukungan debugger seperti DAP (Debug Adapter Protocol)
+    testingIntegration = true,  -- Integrasi alat pengujian seperti Jest, Mocha, atau JUnit
+    projectManagement = true,  -- Integrasi manajemen proyek (e.g., Telescope, LSP Workspace)
+    gitIntegration = {
+      enabled = true,  -- Tambahkan fitur Git di Neovim
+      signs = true,  -- Tampilkan perubahan Git (e.g., hunk signs di baris)
+      diffView = true,  -- Mendukung tampilan diff langsung
+    },
+    fileTree = {
+      enabled = true,  -- Integrasi file tree seperti `nvim-tree` atau `neo-tree`
+      autoSync = true,  -- Sinkronisasi otomatis dengan file saat ini
+    },
+    terminalIntegration = {
+      enabled = true,  -- Tambahkan terminal bawaan ke Neovim
+      splitMode = "horizontal",  -- Mode default terminal terbuka (bisa `horizontal`, `vertical`, atau `float`)
+    },
+    productivityTools = {
+      bookmarks = true,  -- Dukungan bookmark dalam kode
+      todos = true,  -- Highlight dan manajemen TODO/FIXME
+            todo_comments = true,  -- Tambahkan komentar TODO/FIXME
+            todo_comments_ruby = true,  -- Tambahkan komentar TODO/FIXME
+            todo_comments_python = true,  -- Tambahkan komentar TODO/FIXME
+            todo_comments_java = true,  -- Tambahkan komentar TODO/FIXME
+            todo_comments_typescript = true,  -- Tambahkan komentar TODO/FIXME
+            todo_comments_html = true,  -- Tambahkan komentar TODO/FIXME
+            todo_comments_css = true,  -- Tambahkan komentar TODO/FIXME
+            todo_comments_javascript = true,  -- Tambahkan komentar TODO/FIXME
+    },
+  },
+  integrations = {
+    linting = {
+      eslint = true,  -- Aktifkan linting otomatis dengan ESLint
+            eslint_ruby = true,  -- Aktifkan linting otomatis dengan ESLint
+            eslint_python = true,  -- Aktifkan linting otomatis dengan ESLint
+            eslint_java = true,  -- Aktifkan linting otomatis dengan ESLint
+            eslint_typescript = true,  -- Aktifkan linting otomatis dengan ESLint
+            eslint_html = true,  -- Aktifkan linting otomatis dengan ESLint
+            eslint_css = true,  -- Aktifkan linting otomatis dengan ESLint
+            eslint_javascript = true,  -- Aktifkan linting otomatis dengan ESLint
+      stylelint = true,  -- Dukungan linting untuk CSS/SASS
+      pmd = true,  -- Tambahkan PMD untuk Java linting
+    },
+    formatters = {
+      prettier = true,  -- Dukungan untuk Prettier (JavaScript, HTML, CSS)
+            prettier_eslint = true,  -- Dukungan untuk Prettier (JavaScript, HTML, CSS)
+            prettier_json = true,  -- Dukungan untuk Prettier (JavaScript, HTML, CSS)
+            prettier_markdown = true,  -- Dukungan untuk Prettier (JavaScript, HTML, CSS)
+            prettier_yaml = true,  -- Dukungan untuk Prettier (JavaScript, HTML, CSS)
+            prettier_ruby = true,  -- Dukungan untuk Prettier (JavaScript, HTML, CSS)
+            prettier_typescript = true,  -- Dukungan untuk Prettier (JavaScript, HTML, CSS)
+            prettier_python = true,  -- Dukungan untuk Prettier (JavaScript, HTML, CSS)
+      black = true,  -- Dukungan untuk Black (Python)
+      clangFormat = true,  -- Dukungan untuk Clang Format (C/C++)
+    },
+    aiTools = {
+      -- copilot = true,  -- Aktifkan GitHub Copilot (bisa diganti AI lain)
+      -- codeium = true,  -- Opsi alternatif jika menggunakan Codeium
+      --       codeium_ruby = true,  -- Opsi alternatif jika menggunakan Codeium
+      --       codeium_python = true,  -- Opsi alternatif jika menggunakan Codeium
+      --       codeium_java = true,  -- Opsi alternatif jika menggunakan Codeium
+      --       codeium_typescript = true,  -- Opsi alternatif jika menggunakan Codeium
+      --       codeium_html = true,  -- Opsi alternatif jika menggunakan Codeium
+      --       codeium_css = true,  -- Opsi alternatif jika menggunakan Codeium
+      --       codeium_javascript = true,  -- Opsi alternatif jika menggunakan Codeium
+      chatGPT = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_ruby = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_python = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_java = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_typescript = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_html = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_css = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_javascript = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_markdown = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_json = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_yaml = true,  -- Integrasi model GPT langsung di editor
+            chatGPT_sql = true,  -- Integrasi model GPT langsung di editor
+    },
+  },
+}
+
+      },
+    },
+  },
+}
+
