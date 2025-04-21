@@ -8,20 +8,16 @@
 
 --------------
 
-![image](https://github.com/user-attachments/assets/679e35c5-a248-463e-a984-f80d5b1ff651)
-
--------------
+![image](https://github.com/user-attachments/assets/e1bc1836-7652-4005-b93a-df3ffb2f5974)
 
 
-
-
----
+--------------
 
 ## 🎨 About the Theme: Brenda
 
 -- IDK
 
----
+-------------
 
 ## ⚙️ Features
 
@@ -29,6 +25,6 @@
 - 🧠 IDK
 
 
----
+-------------
 
 ## just copy your directory ~/.config/
