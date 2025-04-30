@@ -1,0 +1,99 @@
+lspconfig.ruff.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  on_init = on_init,
+  settings = {
+    python = {
+      analysis = {
+        diagnosticMode = "workspace",
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+        typeCheckingMode = "strict",
+        importStrategy = "fromEnvironment",
+        importFormat = "relative",
+        reportMissingImports = true,
+        reportUnusedImport = true,
+        reportUnusedClass = true,
+        reportUnusedFunction = true,
+        reportUnusedVariable = true,
+        runtimeTypeChecking = true,
+        stubPath = "./stubs",
+        reportGeneralTypeIssues = true,
+        reportUnusedSelf = true,
+        reportUnusedFunctionArgs = true,
+        reportUnusedLoopVars = true,
+        reportUnusedLocals = true,
+        reportUnusedAssignments = true,
+        reportUnusedFunctionResults = true,
+      },
+      linting = {
+        enabled = true,
+        rules = {
+          ["no-assert"] = "off",
+          ["unused-imports"] = "off",
+          ["too-many-locals"] = "off",
+          ["complexity"] = "off",
+          ["inconsistent-return-statements"] = "on",
+          ["no-self-argument"] = "on",
+          ["no-dupe-args"] = "on",
+        },
+        select = {
+          "ALL", -- Aktifkan semua ruleset dari Ruff
+        },
+        ignore = {
+          "C901", -- Ignore complexity warning
+        },
+        extendSelect = {
+          "I",   -- isort rules (import sorting)
+          "F",   -- pyflakes rules
+          "E",   -- pycodestyle errors
+          "W",   -- pycodestyle warnings
+          "D",   -- pydocstyle (docstring rules)
+          "B",   -- flake8-bugbear
+          "PL",  -- pylint-style checks
+          "PT",  -- flake8-pytest-style
+          "NPY", -- numpy specific
+          "PD",  -- pandas specific
+        },
+        fixAll = true, -- Aktifkan auto-fix jika memungkinkan
+      },
+      formatting = {
+        enabled = true,
+        provider = "black",
+        lineLength = 120,
+        allowMultipleLines = true,
+        singleQuote = true,
+      },
+      workspace = {
+        maxPreload = 2000,
+        preloadModules = true,
+        extraPaths = {
+          "./src",
+          "./lib",
+          "./tests",
+        },
+      },
+
+      pythonPath = "/usr/bin/python3.13",
+      targetVersion = "py313",
+
+    },
+    lua = {
+      runtime = {
+        version = "LuaJIT",
+        path = vim.split(package.path, ";"),
+      },
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+    },
+  },
+  flags = {
+    debounce_text_changes = 150,
+  },
+  filetypes = { "python", "jupyter", "ipynb" },
+}
+
